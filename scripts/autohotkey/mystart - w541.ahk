@@ -35,39 +35,26 @@ Return
 
 ; 4、启动chrome。
 !q::
-IfWinNotExist ahk_class Chrome_WidgetWin_1
+IfWinNotExist ahk_exe chrome.exe
 	run, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 Else
-	IfWinNotActive ahk_class Chrome_WidgetWin_1
+	IfWinNotActive ahk_exe chrome.exe
 		WinActivate
 Else
 	WinMinimize
 Return
 
 
-; 5、sublime text。
-!s::
-IfWinNotExist ahk_class PX_WINDOW_CLASS
-	run, c:\Program Files\Sublime Text 3\sublime_text.exe
+; 5、vscode。
+!2::
+IfWinNotExist ahk_exe Code.exe
+	run, C:\Users\guan5\AppData\Local\Programs\Microsoft VS Code\Code.exe
 Else
-	IfWinNotActive ahk_class PX_WINDOW_CLASS
+	IfWinNotActive ahk_exe Code.exe
 		WinActivate
 Else
 	WinMinimize
 Return
-
-
-; 6、potplayer
-; !q::
-; IfWinNotActive, ahk_class PotPlayer64
-; {
-; 	WinActivate, ahk_class PotPlayer64
-; }
-; Else
-; {
-; 	WinMinimize, ahk_class PotPlayer64
-; }
-; Return
 
 ; 7、power shell
 !p::
