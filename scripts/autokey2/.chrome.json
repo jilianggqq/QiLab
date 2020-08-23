@@ -1,0 +1,30 @@
+{
+    "store": {},
+    "showInTrayMenu": false,
+    "filter": {
+        "isRecursive": false,
+        "regex": null
+    },
+    "description": "chrome",
+    "omitTrigger": false,
+    "hotkey": {
+        "hotKey": "q",
+        "modifiers": [
+            "<alt>"
+        ]
+    },
+    "usageCount": 24,
+    "modes": [
+        3
+    ],
+    "abbreviation": {
+        "backspace": true,
+        "immediate": false,
+        "ignoreCase": false,
+        "abbreviations": [],
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "prompt": false,
+    "type": "script"
+}

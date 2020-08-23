@@ -1,0 +1,31 @@
+{
+    "filter": {
+        "regex": "x-terminal-emulator.X-terminal-emulator",
+        "isRecursive": false
+    },
+    "showInTrayMenu": false,
+    "omitTrigger": false,
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "description": "Ubuntu Suspend",
+    "modes": [
+        1
+    ],
+    "abbreviation": {
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "backspace": true,
+        "wordChars": "[\\w]",
+        "abbreviations": [
+            "qqsus"
+        ]
+    },
+    "type": "phrase",
+    "sendMode": "kb",
+    "prompt": false,
+    "matchCase": false,
+    "usageCount": 3
+}
