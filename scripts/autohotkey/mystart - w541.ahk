@@ -14,7 +14,7 @@ Return
 ; 2. youdao dictionary
 !u::
 IfWinNotExist, ahk_class YodaoMainWndClass
-	run, d:\Program Files\Dict\YodaoDict.exe
+	run, C:\Program Files\Dict\YoudaoDict.exe
 Else
 	IfWinNotActive ahk_class YodaoMainWndClass
 	WinActivate
@@ -33,10 +33,10 @@ Else
 	Winminimize
 Return
 
-; 4、启动chrome。
+; 4、start chrome。
 !q::
 IfWinNotExist ahk_exe chrome.exe
-	run, C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+	run, C:\Program Files\Google\Chrome\Application\chrome.exe
 Else
 	IfWinNotActive ahk_exe chrome.exe
 		WinActivate
@@ -56,15 +56,26 @@ Else
 	WinMinimize
 Return
 
-; 7、power shell
+; 6、git bash
+!a::
+IfWinNotExist ahk_exe ahk_exe mintty.exe
+	run, C:\Program Files\Git\git-bash.exe
+Else
+	IfWinNotActive ahk_exe ahk_exe mintty.exe
+		WinActivate
+Else
+	WinMinimize
+Return
+
+; 7、power point
 !p::
-IfWinNotActive, ahk_class ConsoleWindowClass
+IfWinNotActive, ahk_exe POWERPNT.EXE
 {
-	WinActivate, ahk_class ConsoleWindowClass
+	WinActivate, ahk_exe POWERPNT.EXE
 }
 Else
 {
-	WinMinimize, ahk_class ConsoleWindowClass
+	WinMinimize, ahk_exe POWERPNT.EXE
 }
 Return
 
