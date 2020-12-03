@@ -58,10 +58,10 @@ Return
 
 ; 6、git bash
 !a::
-IfWinNotExist ahk_exe ahk_exe mintty.exe
+IfWinNotExist ahk_exe mintty.exe
 	run, C:\Program Files\Git\git-bash.exe
 Else
-	IfWinNotActive ahk_exe ahk_exe mintty.exe
+	IfWinNotActive ahk_exe mintty.exe
 		WinActivate
 Else
 	WinMinimize
@@ -81,14 +81,13 @@ Return
 
 ; 8, onenote(Framewo!k::CFrame)
 !o::
-IfWinNotActive, ahk_class Framework::CFrame
-{
-	WinActivate, ahk_class Framework::CFrame
-}
+IfWinNotExist ahk_exe ONENOTE.EXE
+	run, C:\Program Files (x86)\Microsoft Office\root\Office16\ONENOTE.EXE
 Else
-{
-	WinMinimize, ahk_class Framework::CFrame
-}
+	IfWinNotActive ahk_exe ONENOTE.EXE
+		WinActivate
+Else
+	WinMinimize
 Return
 
 ; (1)if chrome is activeted, define some shortcuts
